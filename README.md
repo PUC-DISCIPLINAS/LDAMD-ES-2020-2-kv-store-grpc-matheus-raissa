@@ -20,8 +20,8 @@ Ou seja, todos os clientes poderão acessar uma base de dados comum.
 
 ### 🚀 Features
 
-- [ ] put(key, value)
-- [ ] get(key) : value
+- [X] put(key, value)
+- [X] get(key) : value
 
 ### 💻 Alunos
 
