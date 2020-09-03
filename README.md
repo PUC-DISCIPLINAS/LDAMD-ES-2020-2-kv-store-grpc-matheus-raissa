@@ -9,6 +9,7 @@
 <p align="center">
  <a href="#-instruções">Instruções</a> •
  <a href="#-features">Features</a> • 
+ <a href="#-pré-requisitos">Pré Requisitos</a> • 
  <a href="#-como-rodar">Como rodar</a> • 
  <a href="#-alunos">Alunos</a> • 
  <a href="#-professor-responsável">Professor Responsável</a> 
@@ -23,6 +24,11 @@ Ou seja, todos os clientes poderão acessar uma base de dados comum.
 
 - [X] put(key, value)
 - [X] get(key) : value
+
+## ✋🏻 Pré-requisitos
+
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/pt-BR/docs/install)
 
 ### 🎲 Como rodar
 
