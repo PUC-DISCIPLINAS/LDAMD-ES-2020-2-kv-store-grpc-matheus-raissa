@@ -26,7 +26,7 @@ app.post('/save', (req, res) => {
   let newClient = {
     name,
     age,
-    address
+    phone
   } = req.body;
 
   client.create(newClient, (err, data) => {
@@ -42,7 +42,7 @@ app.post("/update", (req, res) => {
     id,
     name,
     age,
-    address
+    phone
   } = req.body;
 
   client.put(UpdateClient, (err, data) => {
