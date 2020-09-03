@@ -9,6 +9,7 @@
 <p align="center">
  <a href="#-instruções">Instruções</a> •
  <a href="#-features">Features</a> • 
+ <a href="#-como-rodar">Como rodar</a> • 
  <a href="#-alunos">Alunos</a> • 
  <a href="#-professor-responsável">Professor Responsável</a> 
 </p>
@@ -22,6 +23,23 @@ Ou seja, todos os clientes poderão acessar uma base de dados comum.
 
 - [X] put(key, value)
 - [X] get(key) : value
+
+### 🎲 Como rodar
+
+```
+# Para instalar as dependências
+$ yarn install
+
+# Para rodar o server
+$ yarn dev 
+
+# Para rodar o cliente
+$ cd src 
+$ cd client 
+$ node index.js
+
+# Acesse em <http://localhost:3000>
+```
 
 ### 💻 Alunos
 
