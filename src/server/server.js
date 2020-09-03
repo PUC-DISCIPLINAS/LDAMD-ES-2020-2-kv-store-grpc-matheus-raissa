@@ -24,13 +24,13 @@ const clients = [
     id: "790073e6-ee1a-11ea-adc1-0242ac120002",
     name: "Matheus Santos Rosa Carneiro",
     age: 21,
-    address: "Coreu"
+    phone: "123456789"
   },
   {
     id: "938b6c7a-ee1a-11ea-adc1-0242ac120002",
     name: "Raissa Carolina Vilela da Silva",
     age: 21,
-    address: "Liba"
+    phone: "123456789"
   }
 ];
 
@@ -52,14 +52,14 @@ server.addService(clientsProto.ClientService.service, {
     }
   },
 
-  insert: (call, callback) => {
+  create: (call, callback) => {
     let client = call.request;
     client.id = uuidv4();
     clients.push(client);
     callback(null, client);
   },
 
-  update: (call, callback) => {
+  put: (call, callback) => {
     let clientExists = clients.find(
       n => n.id == call.request.id
     );
@@ -67,7 +67,7 @@ server.addService(clientsProto.ClientService.service, {
     if(clientExists) {
       clientExists.name = call.request.name;
       clientExists.age = call.request.age;
-      clientExists.address = call.request.address;
+      clientExists.phone = call.request.phone;
       callback(null, clientExists);
     } else {
       callback({ code: grpc.status.NOT_FOUND, details: "Not found!" });

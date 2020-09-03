@@ -3,8 +3,8 @@ syntax = "proto3";
 service ClientService {
   rpc GetAll (Empty) returns (ClientList) {}
   rpc Get (ClientRequestId) returns (Client) {}
-  rpc Insert (Client) returns (Client) {}
-  rpc Update (Client) returns (Client) {}
+  rpc Create (Client) returns (Client) {}
+  rpc Put (Client) returns (Client) {}
 }
 
 message Empty {}
@@ -13,7 +13,7 @@ message Client {
   string id = 1;
   string name = 2;
   int32 age = 3;
-  string address = 4;
+  string phone = 4;
 }
 
 message ClientList {

@@ -12,9 +12,10 @@
   "name": "kv-store-grpc-matheus-raissa",
   "description": "> Esse trabalho visa aplicar conhecimentos da matéria de LDAMD utilizando gRPC para desenvolver um Key-Value store in memory.",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "devDependencies": {
-    "ejs": "^3.1.5"
+    "ejs": "^3.1.5",
+    "hbs": "^4.1.1"
   },
   "repository": {
     "type": "git",
