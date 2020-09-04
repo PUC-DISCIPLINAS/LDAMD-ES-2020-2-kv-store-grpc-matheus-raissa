@@ -58,5 +58,5 @@ $ node index.js
 
 
 <h4 align="center"> 
-	🚧 Key-value Store 🚀 em construção... 🚧
+	🚧 Key-value Store 🚀 finalizado... 🚧
 </h4>
