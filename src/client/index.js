@@ -1,4 +1,4 @@
-const client = require('./client');
+const routes = require('./routes');
 
 const path = require('path');
 const express = require('express');
@@ -11,47 +11,7 @@ app.set('view engine', 'hbs');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
-app.get('/', (req, res) => {
-  client.getAll(null, (err, data) => {
-    if(!err) {
-      res.render('clients', {
-        results: data.clients
-      });
-    }
-  });
-});
-
-app.post('/save', (req, res) => {
-  let newClient = {
-    name,
-    age,
-    phone
-  } = req.body;
-
-  client.create(newClient, (err, data) => {
-    if(err) throw err;
-
-    console.log("Client created!", data);
-    res.redirect('/');
-  });
-});
-
-app.post("/update", (req, res) => {
-  const UpdateClient = {
-    id,
-    name,
-    age,
-    phone
-  } = req.body;
-
-  client.put(UpdateClient, (err, data) => {
-    if(err) throw err;
-
-    console.log("Client updated!", data);
-    res.redirect("/");
-  });
-});
+app.use(routes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
